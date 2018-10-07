@@ -26,11 +26,11 @@ public class koneksi {
 
     public Connection getKoneksi() {
         if (koneksi == null) {
-            String database = "billing";
-            String username = "postgres";
-            String password = "itsdevi27";
+            String database = "bh_data";
+            String username = "root";
+            String password = "";
             try {
-                koneksi = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/"
+                koneksi = (Connection) DriverManager.getConnection("localhost:3306/"
                         + database, username, password);
                 stm = koneksi.createStatement();
                 System.out.println("koneksi berhasil");
