@@ -1,5 +1,8 @@
 package battle.of.hero.View;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,6 +15,22 @@ package battle.of.hero.View;
  * @author rakas
  */
 public class Shop extends javax.swing.JFrame {
+
+    public JButton getBack() {
+        return Back;
+    }
+
+    public JButton getgSpell() {
+        return gSpell;
+    }
+
+    public JLabel getPoin() {
+        return poin;
+    }
+
+    public JButton getgHero() {
+        return gHero;
+    }
 
     /**
      * Creates new form Toko
@@ -30,6 +49,10 @@ public class Shop extends javax.swing.JFrame {
     private void initComponents() {
 
         Back = new javax.swing.JButton();
+        poin = new javax.swing.JLabel();
+        gHero = new javax.swing.JButton();
+        gSpell = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -51,7 +74,20 @@ public class Shop extends javax.swing.JFrame {
                 BackActionPerformed(evt);
             }
         });
-        getContentPane().add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 40, 130, 40));
+        getContentPane().add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, 100, 40));
+
+        poin.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        poin.setText("Poin");
+        getContentPane().add(poin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 190, 60));
+
+        gHero.setText("Kartu Penyeang");
+        getContentPane().add(gHero, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, 260, 80));
+
+        gSpell.setText("Kartu Pendukung");
+        getContentPane().add(gSpell, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 480, 260, 90));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/battle/of/hero/image/SHOP.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -109,5 +145,9 @@ public class Shop extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
+    private javax.swing.JButton gHero;
+    private javax.swing.JButton gSpell;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel poin;
     // End of variables declaration//GEN-END:variables
 }

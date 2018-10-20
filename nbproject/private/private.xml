@@ -3,7 +3,32 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle%20of%20Hero/src/battle/of/hero/View/MainMenu.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/Model/mCard.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/BattleMain/koneksi.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/Heropedia.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/BattleMain/Main.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/Nama.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/ABOUT.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/PlayClassic.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/PlayArcade.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/BattleMain/Card.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/Controller/cShop.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/Shop.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/BattleMain/Spell.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/Deck.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/Model/mShop.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/Controller/cHeroPedia.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/Controller/cDeck.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/MainMenu.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/Controller/Controll.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/Model/baseModel.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/BattleMain/jListCon.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/Play.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/BattleMain/Hero.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/Over.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/Help.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/Panel/MainMenu.java</file>
+            <file>file:/C:/Users/rakas/OneDrive/Documents/NetBeansProjects/Battle_of_Hero_Panel_Version/src/battle/of/hero/View/Setting.java</file>
         </group>
     </open-files>
 </project-private>

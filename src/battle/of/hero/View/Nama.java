@@ -108,7 +108,7 @@ public class Nama extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    public static String simpanNama;
+    public String simpanNama;
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         simpanNama = namafield.getText();
         int dont = 0;

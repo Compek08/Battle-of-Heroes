@@ -1,5 +1,12 @@
 package battle.of.hero.View;
 
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -29,7 +36,22 @@ public class Heropedia extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Category = new javax.swing.ButtonGroup();
         Back = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        cardList = new javax.swing.JList<>();
+        radioRare = new javax.swing.JRadioButton();
+        radioLegend = new javax.swing.JRadioButton();
+        radioEpic = new javax.swing.JRadioButton();
+        radioSpell = new javax.swing.JRadioButton();
+        imgSpell = new javax.swing.JLabel();
+        imgHero = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
+        Category.add(radioEpic);
+        Category.add(radioLegend);
+        Category.add(radioRare);
+        Category.add(radioSpell);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,6 +75,35 @@ public class Heropedia extends javax.swing.JFrame {
         });
         getContentPane().add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 40, 130, 40));
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setViewportView(cardList);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 240, 320));
+
+        radioRare.setText("Rare Card");
+        radioRare.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioRareActionPerformed(evt);
+            }
+        });
+        getContentPane().add(radioRare, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
+
+        radioLegend.setText("Legend Card");
+        getContentPane().add(radioLegend, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, -1, -1));
+
+        radioEpic.setText("Epic Card");
+        getContentPane().add(radioEpic, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, -1, -1));
+
+        radioSpell.setText("Spell Card");
+        getContentPane().add(radioSpell, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, -1, -1));
+        getContentPane().add(imgSpell, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 170, 250, 400));
+
+        imgHero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/battle/of/hero/image/kartu/kartu blkg.png"))); // NOI18N
+        getContentPane().add(imgHero, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, 250, 400));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/battle/of/hero/image/bg_heropedia.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -70,6 +121,50 @@ public class Heropedia extends javax.swing.JFrame {
         this.dispose();
 
     }//GEN-LAST:event_BackActionPerformed
+
+    private void radioRareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioRareActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radioRareActionPerformed
+
+    public JButton getBack() {
+        return Back;
+    }
+
+    public ButtonGroup getCategory() {
+        return Category;
+    }
+
+    public JList<String> getCardList() {
+        return cardList;
+    }
+
+    public JLabel getImgHero() {
+        return imgHero;
+    }
+
+    public JLabel getImgSpell() {
+        return imgSpell;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public JRadioButton getRadioEpic() {
+        return radioEpic;
+    }
+
+    public JRadioButton getRadioLegend() {
+        return radioLegend;
+    }
+
+    public JRadioButton getRadioRare() {
+        return radioRare;
+    }
+
+    public JRadioButton getRadioSpell() {
+        return radioSpell;
+    }
 
     /**
      * @param args the command line arguments
@@ -108,5 +203,15 @@ public class Heropedia extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
+    private javax.swing.ButtonGroup Category;
+    private javax.swing.JList<String> cardList;
+    private javax.swing.JLabel imgHero;
+    private javax.swing.JLabel imgSpell;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JRadioButton radioEpic;
+    private javax.swing.JRadioButton radioLegend;
+    private javax.swing.JRadioButton radioRare;
+    private javax.swing.JRadioButton radioSpell;
     // End of variables declaration//GEN-END:variables
 }

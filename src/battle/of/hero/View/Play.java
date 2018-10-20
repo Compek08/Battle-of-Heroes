@@ -32,6 +32,7 @@ public class Play extends javax.swing.JFrame {
 
         Start = new javax.swing.JButton();
         Deck = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -74,6 +75,25 @@ public class Play extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Deck, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 240, 50));
+
+        Back.setBackground(new java.awt.Color(51, 255, 51));
+        Back.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
+        Back.setText("BACK");
+        Back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BackMouseExited(evt);
+            }
+        });
+        Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 40, 130, 40));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
         pack();
@@ -106,6 +126,20 @@ public class Play extends javax.swing.JFrame {
         Arcade.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_DeckActionPerformed
+
+    private void BackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseEntered
+        Back.setBackground(new java.awt.Color(255, 255, 102));
+    }//GEN-LAST:event_BackMouseEntered
+
+    private void BackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseExited
+        Back.setBackground(new java.awt.Color(51, 255, 51));
+    }//GEN-LAST:event_BackMouseExited
+
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
+        MainMenu MainMenu = new MainMenu();
+        MainMenu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,6 +177,7 @@ public class Play extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back;
     private javax.swing.JButton Deck;
     private javax.swing.JButton Start;
     private javax.swing.JLabel jLabel1;

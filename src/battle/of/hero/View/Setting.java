@@ -29,22 +29,22 @@ public class Setting extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         bgVol = new javax.swing.JSlider();
         actVol = new javax.swing.JSlider();
         Back = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        Back1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 760, 120));
-        getContentPane().add(bgVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 550, -1));
-        getContentPane().add(actVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, 550, -1));
+        getContentPane().add(bgVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 320, -1));
+        getContentPane().add(actVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 380, 320, -1));
 
         Back.setBackground(new java.awt.Color(51, 255, 51));
         Back.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
-        Back.setText("BACK");
+        Back.setText("Simpan");
         Back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -59,15 +59,37 @@ public class Setting extends javax.swing.JFrame {
                 BackActionPerformed(evt);
             }
         });
-        getContentPane().add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 40, 130, 40));
+        getContentPane().add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, 130, 40));
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel2.setText("Volume Lagu Latar Belakang");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel3.setText("Volume Aksi");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, -1, -1));
+
+        Back1.setBackground(new java.awt.Color(51, 255, 51));
+        Back1.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
+        Back1.setText("BACK");
+        Back1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Back1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Back1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Back1MouseExited(evt);
+            }
+        });
+        Back1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Back1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Back1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 130, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/battle/of/hero/image/pengaturan.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 1280, 720));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -86,6 +108,20 @@ public class Setting extends javax.swing.JFrame {
         this.dispose();
 
     }//GEN-LAST:event_BackActionPerformed
+
+    private void Back1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Back1MouseEntered
+
+    private void Back1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Back1MouseExited
+
+    private void Back1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back1ActionPerformed
+        MainMenu MainMenu = new MainMenu();
+        MainMenu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Back1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,6 +160,7 @@ public class Setting extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
+    private javax.swing.JButton Back1;
     private javax.swing.JSlider actVol;
     private javax.swing.JSlider bgVol;
     private javax.swing.JLabel jLabel1;

@@ -1,5 +1,9 @@
 package battle.of.hero.View;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,6 +24,34 @@ public class Deck extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JButton getBtnSave() {
+        return btnSave;
+    }
+
+    public JButton getBack() {
+        return Back;
+    }
+
+    public JButton getBtnAdd() {
+        return btnAdd;
+    }
+
+    public JButton getBtnRemove() {
+        return btnRemove;
+    }
+
+    public JLabel getCardPrev() {
+        return cardPrev;
+    }
+
+    public JList<String> getListCard() {
+        return listCard;
+    }
+
+    public JList<String> getListDeck() {
+        return listDeck;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,6 +62,15 @@ public class Deck extends javax.swing.JFrame {
     private void initComponents() {
 
         Back = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        listDeck = new javax.swing.JList<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        listCard = new javax.swing.JList<>();
+        cardPrev = new javax.swing.JLabel();
+        btnAdd = new javax.swing.JButton();
+        btnRemove = new javax.swing.JButton();
+        btnSave = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,24 +94,60 @@ public class Deck extends javax.swing.JFrame {
         });
         getContentPane().add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 20, 130, 40));
 
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        listDeck.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(listDeck);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 350, 180, 280));
+
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        listCard.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(listCard);
+
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 180, 280));
+
+        cardPrev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/battle/of/hero/image/kartu/kartu blkg.png"))); // NOI18N
+        getContentPane().add(cardPrev, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 250, 400));
+
+        btnAdd.setText("Add");
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 600, 80, -1));
+
+        btnRemove.setText("Remove");
+        getContentPane().add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 600, -1, -1));
+
+        btnSave.setText("Save");
+        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, 70, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/battle/of/hero/image/bg_dek.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseEntered
-        Back.setBackground(new java.awt.Color(255, 255, 102));
-    }//GEN-LAST:event_BackMouseEntered
-
-    private void BackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseExited
-        Back.setBackground(new java.awt.Color(51, 255, 51));
-    }//GEN-LAST:event_BackMouseExited
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         MainMenu MainMenu = new MainMenu();
         MainMenu.setVisible(true);
         this.dispose();
-
     }//GEN-LAST:event_BackActionPerformed
 
+    private void BackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseExited
+        Back.setBackground(new java.awt.Color(51, 255, 51));
+    }//GEN-LAST:event_BackMouseExited
+
+    private void BackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseEntered
+        Back.setBackground(new java.awt.Color(255, 255, 102));
+    }//GEN-LAST:event_BackMouseEntered
+/***/
     /**
      * @param args the command line arguments
      */
@@ -108,5 +185,14 @@ public class Deck extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnRemove;
+    private javax.swing.JButton btnSave;
+    private javax.swing.JLabel cardPrev;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JList<String> listCard;
+    private javax.swing.JList<String> listDeck;
     // End of variables declaration//GEN-END:variables
 }

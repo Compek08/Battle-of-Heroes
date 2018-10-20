@@ -1,9 +1,12 @@
 package battle.of.hero.View;
 
-
-
-
+import BattleMain.koneksi;
+import battle.of.hero.Controller.*;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /*
@@ -16,44 +19,45 @@ import javax.swing.JOptionPane;
  * @author WINDOWS 8.1
  */
 public class MainMenu extends javax.swing.JFrame {
+
     int rgbIn = 16711680, rgbOut = 10027008;
-    
+    cShop cShop;
+
     public MainMenu() {
         initComponents();
     }
 
-    public void startActionListener(ActionListener a){
+    public void startActionListener(ActionListener a) {
         Start.addActionListener(a);
     }
-    
-    public void dekActionListener(ActionListener a){
+
+    public void dekActionListener(ActionListener a) {
         Deck.addActionListener(a);
     }
-    
-    public void heropediaActionListener(ActionListener a){
+
+    public void heropediaActionListener(ActionListener a) {
         Heropedia.addActionListener(a);
     }
-    
-    public void tokoActionListener(ActionListener a){
+
+    public void tokoActionListener(ActionListener a) {
         Shop.addActionListener(a);
     }
-    
-    public void settingActionListener(ActionListener a){
+
+    public void settingActionListener(ActionListener a) {
         Setting.addActionListener(a);
     }
-    
-    public void helpActionListener(ActionListener a){
+
+    public void helpActionListener(ActionListener a) {
         Help.addActionListener(a);
     }
-    
-    public void aboutActionListener(ActionListener a){
+
+    public void aboutActionListener(ActionListener a) {
         About.addActionListener(a);
     }
-    
-    public void quitActionListener(ActionListener a){
+
+    public void quitActionListener(ActionListener a) {
         Quit.addActionListener(a);
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -110,7 +114,7 @@ public class MainMenu extends javax.swing.JFrame {
                 StartActionPerformed(evt);
             }
         });
-        getContentPane().add(Start, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 240, 50));
+        getContentPane().add(Start, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 340, 70));
 
         About.setBackground(new java.awt.Color(153, 0, 0));
         About.setFont(new java.awt.Font("Bell MT", 1, 36)); // NOI18N
@@ -129,7 +133,7 @@ public class MainMenu extends javax.swing.JFrame {
                 AboutActionPerformed(evt);
             }
         });
-        getContentPane().add(About, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 360, 250, 50));
+        getContentPane().add(About, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 560, 240, 40));
 
         Help.setBackground(new java.awt.Color(153, 0, 0));
         Help.setFont(new java.awt.Font("Bell MT", 1, 36)); // NOI18N
@@ -148,7 +152,7 @@ public class MainMenu extends javax.swing.JFrame {
                 HelpActionPerformed(evt);
             }
         });
-        getContentPane().add(Help, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 280, 250, 50));
+        getContentPane().add(Help, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 480, 240, 40));
 
         Quit.setBackground(new java.awt.Color(153, 0, 0));
         Quit.setFont(new java.awt.Font("Bell MT", 1, 36)); // NOI18N
@@ -167,7 +171,7 @@ public class MainMenu extends javax.swing.JFrame {
                 QuitActionPerformed(evt);
             }
         });
-        getContentPane().add(Quit, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 440, 240, 50));
+        getContentPane().add(Quit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 40, 160, 50));
 
         Setting.setBackground(new java.awt.Color(153, 0, 0));
         Setting.setFont(new java.awt.Font("Bell MT", 1, 36)); // NOI18N
@@ -186,7 +190,7 @@ public class MainMenu extends javax.swing.JFrame {
                 SettingActionPerformed(evt);
             }
         });
-        getContentPane().add(Setting, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 200, 240, 50));
+        getContentPane().add(Setting, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 570, -1, 40));
 
         Deck.setBackground(new java.awt.Color(153, 0, 0));
         Deck.setFont(new java.awt.Font("Bell MT", 1, 36)); // NOI18N
@@ -205,7 +209,7 @@ public class MainMenu extends javax.swing.JFrame {
                 DeckActionPerformed(evt);
             }
         });
-        getContentPane().add(Deck, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 240, 50));
+        getContentPane().add(Deck, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 330, 270, 50));
 
         Heropedia.setBackground(new java.awt.Color(153, 0, 0));
         Heropedia.setFont(new java.awt.Font("Bell MT", 1, 36)); // NOI18N
@@ -224,7 +228,7 @@ public class MainMenu extends javax.swing.JFrame {
                 HeropediaActionPerformed(evt);
             }
         });
-        getContentPane().add(Heropedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, 240, -1));
+        getContentPane().add(Heropedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 409, 250, 40));
 
         Shop.setBackground(new java.awt.Color(153, 0, 0));
         Shop.setFont(new java.awt.Font("Bell MT", 1, 36)); // NOI18N
@@ -243,9 +247,9 @@ public class MainMenu extends javax.swing.JFrame {
                 ShopActionPerformed(evt);
             }
         });
-        getContentPane().add(Shop, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, 240, 50));
+        getContentPane().add(Shop, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 560, 140, 50));
 
-        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/battle/of/hero/Image/menu.png"))); // NOI18N
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/battle/of/hero/image/menu.png"))); // NOI18N
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
         pack();
@@ -303,8 +307,9 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_QuitMouseExited
 
     private void QuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitActionPerformed
-        if(JOptionPane.showConfirmDialog(rootPane, "Apakah anda yakin ingin keluar?", "Warning", JOptionPane.WARNING_MESSAGE) == JOptionPane.YES_OPTION)
+        if (JOptionPane.showConfirmDialog(rootPane, "Apakah anda yakin ingin keluar?", "Warning", JOptionPane.WARNING_MESSAGE) == JOptionPane.YES_OPTION) {
             System.exit(WIDTH);
+        }
     }//GEN-LAST:event_QuitActionPerformed
 
     private void SettingMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SettingMouseEntered
@@ -330,9 +335,15 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_DeckMouseExited
 
     private void DeckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeckActionPerformed
-        Deck Deck = new Deck();
-        Deck.setVisible(true);
-        this.dispose();
+        try {
+            //        Deck Deck = new Deck();
+//        Deck.setVisible(true);
+//        this.dispose();
+cDeck deck = new cDeck();
+this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_DeckActionPerformed
 
     private void HeropediaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HeropediaMouseEntered
@@ -344,8 +355,13 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_HeropediaMouseExited
 
     private void HeropediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeropediaActionPerformed
-        Heropedia Heropedia = new Heropedia();
-        Heropedia.setVisible(true);
+        try {
+            //        Heropedia Heropedia = new Heropedia();
+//        Heropedia.setVisible(true);
+            cHeroPedia hero = new cHeroPedia();
+        } catch (SQLException ex) {
+            Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_HeropediaActionPerformed
 
@@ -358,9 +374,15 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_ShopMouseExited
 
     private void ShopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShopActionPerformed
-        Shop Shop = new Shop();
-        Shop.setVisible(true);
-        this.dispose();
+        try {
+            //        Shop Shop = new Shop();
+//        Shop.setVisible(true);
+//        this.dispose();
+ cShop = new cShop();
+this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_ShopActionPerformed
 
     /**
@@ -396,7 +418,13 @@ public class MainMenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainMenu().setVisible(true);
+                try {
+                    Connection konek = new koneksi().getKoneksi();
+                    System.out.println(konek);
+                    new MainMenu().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

@@ -8,7 +8,7 @@ package battle.of.hero.Model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import Main.koneksi;
+import BattleMain.*;
 
 /**
  *
@@ -19,14 +19,14 @@ public abstract class baseModel {
     private Connection koneksi;
     private koneksi kon;
 
-    public baseModel() {
+    public baseModel() throws SQLException {
         koneksi = new koneksi().getKoneksi();
         kon = new koneksi();
     }
 
-    abstract String login();
+//    abstract String login();
 
-    protected boolean insert(String query) throws SQLException {
+    protected boolean create(String query) throws SQLException {
         try {
             PreparedStatement st = koneksi.prepareStatement(query);
             st.executeUpdate();
